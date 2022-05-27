@@ -6,9 +6,9 @@ hidl_interface {
     system_ext_specific: true,
     srcs: [
         "types.hal",
-        "IMTKBluetoothAudioPort.hal",
-        "IMTKBluetoothAudioProvider.hal",
-        "IMTKBluetoothAudioProvidersFactory.hal",
+        "IBluetoothAudioPort.hal",
+        "IBluetoothAudioProvider.hal",
+        "IBluetoothAudioProvidersFactory.hal",
     ],
     interfaces: [
         "android.hardware.audio.common@5.0",
