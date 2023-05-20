@@ -20,8 +20,10 @@ import IEmNfcResponse;
 import @1.2::IEmd;
 
 interface IEmd extends @1.2::IEmd {
-    readMnlConfigFile() generates (int32_t result);
-    writeMnlConfigFile() generates (int32_t result);
-    setNfcResponseFunction() generates (int32_t result);
-    sendNfcRequest() generates (int32_t result);
+    readMnlConfigFile(vec<int32_t> tag) generates (vec<uint8_t> data);
+    writeMnlConfigFile(vec<uint8_t> content, vec<int32_t> tag) generates (bool success);
+    setNfcResponseFunction(IEmNfcResponse response);
+    connect() generates (bool success);
+    disconnect();
+    oneway sendNfcRequest(int32_t ins, vec<uint8_t> detail);
 };

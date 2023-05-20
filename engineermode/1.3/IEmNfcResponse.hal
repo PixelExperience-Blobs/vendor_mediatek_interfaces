@@ -17,5 +17,5 @@
 package vendor.mediatek.hardware.engineermode@1.3;
 
 interface IEmNfcResponse {
-    response() generates (int32_t result);
+    oneway response(vec<uint8_t> message);
 };
